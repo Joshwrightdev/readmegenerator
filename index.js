@@ -1,50 +1,10 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
+const util = require("util");
+const writeFileAsync = util.promisify(fs.writeFile);
 
-const generateMD = (answers) =>
-  `  
-  # ${answers.title}
-
-  ## ${answers.description}
-    
-  ## Table of Contents
-  =================
-  * [Usage](#usage)
-  * [License](#license)
-  * [Installation](#installation)
-  * [Contributing](#contributing)
-  * [Tests](#tests)
-  * [Questions](#questions)
-  
- 
-  # Usage 
-  ## ${answers.usage}
-
-  # License
-  ## ${answers.license}
-
-  # Installation
-  ## ${answers.installation}
-
-  # Contributing 
-  ## ${answers.contributing}
-
-  # Tests
-  ## ${answers.tests}
-
-  # Questions
-
-
-  ### Email
-   ${answers.email}
-  ### Github
-  #### ${answers.username}
-  #### ${answers.link}
-`;
-
-// TODO: Create an array of questions for user input
-inquirer
-  .prompt([
+const promptUser = () => {
+  return inquirer.prompt([
     {
       type: "input",
       name: "username",
@@ -79,7 +39,7 @@ inquirer
       type: "list",
       name: "license",
       message: "Choose license type:",
-      choices: ["MIT LICENSE", "OTHER"],
+      choices: ["MIT License", "Apache License", "GPL License"],
     },
     {
       type: "input",
@@ -96,17 +56,55 @@ inquirer
       name: "tests",
       message: "Enter Tests:",
     },
-  ])
-  .then((answers) => {
-    const mdPageContent = generateMD(answers);
+  ]);
+};
 
-    fs.writeFile("readme.md", mdPageContent, (err) =>
-      err ? console.log(err) : console.log("Successfully created ReadMe File!")
-    );
-  });
+const generateMd = (answers) =>
+  `  
+  # ${answers.title}
+ 
+  ## ${answers.description}
+    
+  # Table of Contents
+  
+  * [Usage](#usage)
+  * [License](#license)
+  * [Installation](#installation)
+  * [Contributing](#contributing)
+  * [Tests](#tests)
+  * [Questions](#questions)
+  
+ 
+  # Usage 
+  ## ${answers.usage}
 
-// TODO: Create a function to initialize app
-// function init() {}
+  # License
+  ## ${answers.license}
 
-// // Function call to initialize app
-// init();
+  # Installation
+  ## ${answers.installation}
+
+  ## Contributing 
+  ### ${answers.contributing}
+
+  # Tests
+  ## ${answers.tests}
+
+  # Questions
+
+
+  ## Email
+   ${answers.email}
+  ## Github
+  #### ${answers.username}
+  #### ${answers.link}
+`;
+
+const init = () => {
+  promptUser()
+    .then((answers) => writeFileAsync("readme.md", generateMd(answers)))
+    .then(() => console.log("Successfully wrote to readme.md"))
+    .catch((err) => console.error(err));
+};
+
+init();

@@ -1,46 +1,46 @@
 # Readme Generator
 
-##
+# DEMO OF README GENERATOR
 
-## Table of Contents
+## Lorem Ipsum
 
-=================
+<iframe src="https://player.vimeo.com/video/535032578?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="ReadmeGenerator"></iframe># Table of Contents
 
-- [USAGE](#usage)
-- [LICENSE](#license)
+- [Usage](#usage)
+- [License](#license)
 - [Installation](#installation)
-- [CONTRIBUTING](#contributing)
-- [TESTS](#tests)
-- [QUESTIONS](#questions)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
 
 # Usage
 
-## lorem ipsum
+## Lorem Ipsum
 
 # License
 
-## MIT LICENSE
+## MIT License
 
 # Installation
 
-## clone the repo
+## Lorem Ipsum
 
-# Contributing
+## Contributing
 
-## lorem ipsum
+### Lorem Ipsum
 
 # Tests
 
-## lorem ipsum
+## Lorem Ipsum
 
 # Questions
 
-### Email
+## Email
 
 joshwrightaudio@gmail.com
 
-### Github
+## Github
 
-#### joshwrightdev
+#### @joshwrightdev
 
 #### github.com/joshwrightdev
