@@ -4,9 +4,11 @@
 
 ## Lorem Ipsum
 
+<!-- blank line -->
 <figure class="video_container">
-  <iframe src="https://player.vimeo.com/video/535032578?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allowfullscreen="true"> </iframe>
+  <iframe src="https://player.vimeo.com/video/535032578" frameborder="0" allowfullscreen="true"> </iframe>
 </figure>
+<!-- blank line -->
 
 # Table of Contents
 
