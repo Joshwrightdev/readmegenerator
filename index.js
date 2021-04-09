@@ -2,7 +2,11 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 
 const generateMD = (answers) =>
-  ` ${answers.username} ${answers.title}${answers.email} ${answers.description}
+  `  
+  ## GITHUB USERNAME: ${answers.username}
+  ## PROJECT TITLE: ${answers.title}
+  ## EMAIL: ${answers.email}
+  ## PROJECT DESCRIPTION: ${answers.description}
 `;
 
 // TODO: Create an array of questions for user input
