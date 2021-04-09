@@ -3,12 +3,10 @@
 # DEMO OF README GENERATOR
 
 ## Lorem Ipsum
+![readme-cover](https://user-images.githubusercontent.com/79671012/114239363-ffed2900-9953-11eb-913c-74872dff993a.png)
+LINK TO DEMO: https://vimeo.com/535032578
 
-<!-- blank line -->
-<figure class="video_container">
-  <iframe src="https://player.vimeo.com/video/535032578" frameborder="0" allowfullscreen="true"> </iframe>
-</figure>
-<!-- blank line -->
+
 
 # Table of Contents
 
