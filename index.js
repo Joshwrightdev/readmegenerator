@@ -9,8 +9,20 @@ inquirer.prompt([
     message: "Enter your github Username:",
   },
   {
-      
-  }
+    type: "input",
+    name: "title",
+    message: "Enter your project title :",
+  },
+  {
+    type: "input",
+    name: "email",
+    message: "Enter your Email:",
+  },
+  {
+    type: "input",
+    name: "description",
+    message: "Enter project description/details:",
+  },
 ]);
 
 // TODO: Create a function to write README file
